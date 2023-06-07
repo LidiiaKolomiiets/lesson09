@@ -1,10 +1,12 @@
-const array = [1, 2, 3, 4, 5, 6, 7];
+const array = [2, 45, 8, 'hello', 78, 14];
+let index = 0;
 
-let item = 0;
-
-function removeElement(array, item){
-    array = array.splice(item-1, 1)
+function removeElement(array, item) {
+    index = array.indexOf(item)
+    if (index >= 0) {
+        array = array.splice(index, 1);
+    }
 }
 
-removeElement(array, 5);
+removeElement(array, 'hello');
 console.log(array);
